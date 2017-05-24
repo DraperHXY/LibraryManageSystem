@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="library_book_info@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="library_book_info">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="blog"/>
+    <schema id="4" parent="1" name="hibernatelearning"/>
+    <schema id="5" parent="1" name="hibernatelearning2"/>
+    <schema id="6" parent="1" name="information_schema"/>
+    <schema id="7" parent="1" name="jdbclearning"/>
+    <schema id="8" parent="1" name="libary_book_info"/>
+    <schema id="9" parent="1" name="mysql"/>
+    <schema id="10" parent="1" name="mysqllearning"/>
+    <schema id="11" parent="1" name="performance_schema"/>
+    <schema id="12" parent="1" name="sakila"/>
+    <schema id="13" parent="1" name="sampledb"/>
+    <schema id="14" parent="1" name="shin"/>
+    <schema id="15" parent="1" name="sign_up_xiuzhenyuan"/>
+    <schema id="16" parent="1" name="sys"/>
+    <schema id="17" parent="1" name="world"/>
+    <table id="18" parent="2" name="book_info"/>
+    <table id="19" parent="2" name="hibernate_sequence"/>
+    <column id="20" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="18" name="author">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="18" name="imageUrl">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;http://www.doershow.com/uploads/allimg/101213/1504242026-58.jpg&apos;</DefaultExpression>
+    </column>
+    <column id="23" parent="18" name="isbn">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="24" parent="18" name="name">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="18" name="pages">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="26" parent="18" name="price">
+      <Position>7</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="27" parent="18" name="publishCom">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="28" parent="18" name="publishDate">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <index id="29" parent="18" name="UK_1hmg5nj91r0x0xbjpp6ifa5hg">
+      <ColNames>isbn</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="30" parent="18" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="31" parent="18" name="UK_1hmg5nj91r0x0xbjpp6ifa5hg">
+      <ColNames>isbn</ColNames>
+      <UnderlyingIndexName>UK_1hmg5nj91r0x0xbjpp6ifa5hg</UnderlyingIndexName>
+    </key>
+    <column id="32" parent="19" name="next_val">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+  </database-model>
+</dataSource>

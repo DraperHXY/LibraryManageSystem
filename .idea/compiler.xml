@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="LibaryManageSystem" />
+        <module name="LibraryManageSystem" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="LibaryManageSystem" target="1.5" />
+      <module name="LibraryManageSystem" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
