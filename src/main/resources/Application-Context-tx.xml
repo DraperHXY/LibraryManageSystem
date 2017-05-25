@@ -5,39 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <!--数据源配置-->
-    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-        <property name="driverClassName" value="${driverClassName}"/>
-        <property name="url" value="${url}"/>
-        <property name="username" value="${userName}"/>
-        <property name="password" value="${password}"/>
-    </bean>
-
-    <!--会话工厂-->
-    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
-        <property name="dataSource" ref="dataSource"/>
-        <property name="hibernateProperties">
-            <props>
-                <!--MySQL 的方言-->
-                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
-                <prop key="hibernate.hbm2ddl.auto">update</prop>
-                <prop key="hibernate.show_sql">true</prop>
-                <!--漂亮的格式显示 SQL 语句-->
-                <prop key="hibernate.format_sql">true</prop>
-                <prop key="current_session_context_class">thread</prop>
-            </props>
-        </property>
-
-        <property name="annotatedClasses">
-            <list>
-                <value>com.draper.domain.Book</value>
-            </list>
-        </property>
-    </bean>
-
-    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate5.HibernateTemplate">
-        <property name="sessionFactory" ref="sessionFactory"/>
-    </bean>
+    <import resource="Application-Context-dao.xml"/>
 
     <!--配置 Spring 声明式事务-->
     <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">

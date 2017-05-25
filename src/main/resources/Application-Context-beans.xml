@@ -4,23 +4,5 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <import resource="Application-Context-common.xml"/>
-
-    <bean id="bookDao" class="com.draper.dao.impl.BookDaoImpl">
-        <property name="hibernateTemplate" ref="hibernateTemplate"/>
-    </bean>
-
-    <import resource="Application-Context-dao.xml"/>
-    <import resource="Application-Context-tx.xml"/>
-
-    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="jdbc.properties"/>
-    </bean>
-
-
-    <!--<bean id="logDao" class="com.draper.dao.LogDao">-->
-        <!--<property name="hibernateTemplate" ref="hibernateTemplate"/>-->
-    <!--</bean>-->
-
 
 </beans>

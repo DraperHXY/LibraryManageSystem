@@ -1,6 +1,9 @@
 package com.draper.dao;
 
-import com.draper.Base;
+import com.draper.domain.Book;
 
-public interface BookDao extends Base {
+public interface BookDao extends BaseDao {
+
+    Book get(int id);
+
 }

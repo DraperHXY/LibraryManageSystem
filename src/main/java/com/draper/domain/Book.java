@@ -8,18 +8,18 @@ import java.util.Date;
 public class Book {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     @Column
-    private Integer id;
+    private int id;
 
     @Column(nullable = false)
     private String name;//书名
 
-    @Column
-    private String publishCom;//出版社
-
     @Column(nullable = false)
     private String author;//作者
+
+    @Column
+    private String publishCom;//出版社
 
     @Column
     private Date publishDate;//出版日期
@@ -107,5 +107,17 @@ public class Book {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return " 书名: " + name
+                + " 作者: " + author
+                + " 出版社: " + publishCom
+                + " 出版日期: " + publishDate
+                + " 页数: " + pages
+                + " 价格: " + price
+                + " 图片地址: " + imageUrl
+                + " ISBN: " + isbn;
     }
 }
