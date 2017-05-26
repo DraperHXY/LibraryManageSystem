@@ -13,7 +13,7 @@ public class Log {
 
     @Id
     @Column
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     //日志类别，一般起到不可否认性

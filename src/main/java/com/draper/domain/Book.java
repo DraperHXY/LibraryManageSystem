@@ -4,13 +4,8 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "book_info")
+@Table(name = "book")
 public class Book {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
-    @Column
-    private int id;
 
     @Column(nullable = false)
     private String name;//书名
@@ -33,6 +28,7 @@ public class Book {
     @Column(columnDefinition = "VARCHAR(255) default 'http://www.doershow.com/uploads/allimg/101213/1504242026-58.jpg'")
     private String imageUrl;//书的图片的地址
 
+    @Id
     @Column(unique = true)
     private String isbn;//ISBN
 
@@ -99,14 +95,6 @@ public class Book {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     @Override

@@ -2,6 +2,7 @@ package com.draper.dao.impl;
 
 import com.draper.dao.LogDao;
 import com.draper.domain.Log;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -10,6 +11,7 @@ public class LogDaoImpl implements LogDao {
 
     private HibernateTemplate hibernateTemplate;
 
+    @Autowired
     public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
         this.hibernateTemplate = hibernateTemplate;
     }
@@ -21,7 +23,7 @@ public class LogDaoImpl implements LogDao {
     }
 
     public Log get(int id) {
-        Log log = hibernateTemplate.get(Log.class,id);
+        Log log = hibernateTemplate.get(Log.class, id);
         return log;
     }
 
@@ -32,5 +34,9 @@ public class LogDaoImpl implements LogDao {
     public void delete(int id) {
         Log log = get(id);
         hibernateTemplate.delete(log);
+    }
+
+    public boolean update(Object object) {
+        return false;
     }
 }

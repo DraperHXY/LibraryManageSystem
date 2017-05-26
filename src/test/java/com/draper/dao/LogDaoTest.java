@@ -1,6 +1,5 @@
 package com.draper.dao;
 
-import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -13,9 +12,5 @@ public class LogDaoTest {
     @Autowired
     LogDao logDao;
 
-    @Test
-    public void testDelete() throws Exception{
-        logDao.delete(15);
-    }
 
 }

@@ -4,5 +4,6 @@ public interface BaseDao {
 
     void add(Object object);
 
-    void delete(int id);
+    boolean update(Object object);
+
 }

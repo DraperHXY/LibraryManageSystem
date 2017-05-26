@@ -9,13 +9,11 @@
     <context:component-scan base-package="com.draper.dao"/>
     <context:component-scan base-package="com.draper.domain"/>
 
-    <bean id="bookDao" class="com.draper.dao.impl.BookDaoImpl">
-        <property name="hibernateTemplate" ref="hibernateTemplate"/>
-    </bean>
+    <bean id="bookDao" class="com.draper.dao.impl.BookDaoImpl"/>
 
-    <bean id="logDao" class="com.draper.dao.impl.LogDaoImpl">
-        <property name="hibernateTemplate" ref="hibernateTemplate"/>
-    </bean>
+    <bean id="logDao" class="com.draper.dao.impl.LogDaoImpl"/>
+
+    <bean id="adminDao" class="com.draper.dao.impl.AdminDaoImpl"/>
 
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="location" value="jdbc.properties"/>
@@ -48,6 +46,7 @@
             <list>
                 <value>com.draper.domain.Book</value>
                 <value>com.draper.domain.Log</value>
+                <value>com.draper.domain.Admin</value>
             </list>
         </property>
     </bean>
