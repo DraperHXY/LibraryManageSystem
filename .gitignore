@@ -50,6 +50,3 @@ fabric.properties
 .idea/workspace.xml
 target/
 /src/main/resources/jdbc.properties
-=======
-/resource/jdbc.properties
->>>>>>> origin/master

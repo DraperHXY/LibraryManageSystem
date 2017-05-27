@@ -15,6 +15,10 @@
 
     <bean id="adminDao" class="com.draper.dao.impl.AdminDaoImpl"/>
 
+    <bean id="userDao" class="com.draper.dao.impl.UserDaoImpl"/>
+
+    <bean id="borrowBookDao" class="com.draper.dao.impl.BorrowBookDaoImpl"/>
+
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="location" value="jdbc.properties"/>
     </bean>
@@ -47,6 +51,8 @@
                 <value>com.draper.domain.Book</value>
                 <value>com.draper.domain.Log</value>
                 <value>com.draper.domain.Admin</value>
+                <value>com.draper.domain.User</value>
+                <value>com.draper.domain.BorrowBook</value>
             </list>
         </property>
     </bean>
