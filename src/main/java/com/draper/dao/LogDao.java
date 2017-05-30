@@ -10,5 +10,5 @@ public interface LogDao extends BaseDao {
      * @param object
      * @deprecated 不能修改日志
      */
-    boolean update(Object object);
+    void update(Object object);
 }

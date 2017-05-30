@@ -11,12 +11,6 @@ public class LogDaoImpl implements LogDao {
 
     private HibernateTemplate hibernateTemplate;
 
-    @Autowired
-    public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
-        this.hibernateTemplate = hibernateTemplate;
-    }
-
-
     public void add(Object object) {
         Log log = (Log) object;
         hibernateTemplate.save(log);
@@ -36,7 +30,15 @@ public class LogDaoImpl implements LogDao {
         hibernateTemplate.delete(log);
     }
 
-    public boolean update(Object object) {
-        return false;
+    /**
+     * @deprecated
+     * @param object
+     */
+    public void update(Object object) {
+    }
+
+    @Autowired
+    public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
+        this.hibernateTemplate = hibernateTemplate;
     }
 }

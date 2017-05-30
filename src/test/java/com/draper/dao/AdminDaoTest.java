@@ -35,8 +35,9 @@ public class AdminDaoTest {
     public void testUpdate() {
         Admin admin = new Admin();
         admin.setAccount("Draper");
-        admin.setPassword("ddd");
-        adminDao.update(admin);
+        admin.setPassword("ddddd");
+        BaseDao<Admin> baseDao = adminDao;
+        baseDao.update(admin);
     }
 
 

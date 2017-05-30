@@ -4,6 +4,6 @@ public interface BorrowBookDao extends BaseDao{
 
     void add(Object object);
 
-    boolean update(Object object);
+    void update(Object object);
 
 }
