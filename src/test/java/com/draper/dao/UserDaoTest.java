@@ -28,7 +28,7 @@ public class UserDaoTest {
         User user = new User();
         user.setAccount("user");
         user.setPassword("user");
-        Assert.assertEquals(true, userDao.isSuccess(user));
+        Assert.assertEquals(true, userDao.isSecurity(user));
     }
 
     @Test

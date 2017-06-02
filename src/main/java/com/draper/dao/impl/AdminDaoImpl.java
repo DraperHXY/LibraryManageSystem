@@ -21,7 +21,18 @@ public class AdminDaoImpl implements AdminDao {
         hibernateTemplate.update(admin);
     }
 
-    public boolean isSuccess(Admin admin) {
+    public void delete(Object object) {
+        Admin admin = (Admin) object;
+        hibernateTemplate.delete(admin);
+    }
+
+    @Autowired
+    public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
+        this.hibernateTemplate = hibernateTemplate;
+    }
+
+    public boolean isSecurity(Object object) {
+        Admin admin= (Admin) object;
         Admin adm = hibernateTemplate.get(Admin.class, admin.getAccount());
         String account = admin.getAccount();
         String psd = admin.getPassword();
@@ -30,14 +41,5 @@ public class AdminDaoImpl implements AdminDao {
         } else {
             return false;
         }
-    }
-
-    public boolean delete(Admin admin) {
-        return false;
-    }
-
-    @Autowired
-    public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
-        this.hibernateTemplate = hibernateTemplate;
     }
 }

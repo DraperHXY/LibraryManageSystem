@@ -19,6 +19,19 @@ public class BorrowBookDaoImpl implements BorrowBookDao {
         hibernateTemplate.update(borrowBook);
     }
 
+    public BorrowBook find(String userAccount) {
+        BorrowBook borrowBook = hibernateTemplate.get(BorrowBook.class, userAccount);
+        return borrowBook;
+    }
+
+    /**
+     * @deprecated
+     * @param object
+     */
+    public void delete(Object object) {
+
+    }
+
     @Autowired
     public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
         this.hibernateTemplate = hibernateTemplate;

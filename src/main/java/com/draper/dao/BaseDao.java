@@ -6,4 +6,6 @@ public interface BaseDao {
 
     void update(Object object);
 
+    void delete(Object object);
+
 }

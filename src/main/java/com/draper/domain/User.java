@@ -8,7 +8,7 @@ import java.util.Date;
 
 @Entity
 @Table
-public class User {
+public class User extends BaseDomain{
 
     @Id
     @Column

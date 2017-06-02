@@ -5,7 +5,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "book")
-public class Book {
+public class Book extends BaseDomain{
 
     @Column(nullable = false)
     private String name;//书名

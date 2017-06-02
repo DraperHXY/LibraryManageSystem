@@ -1,9 +1,9 @@
 package com.draper.dao;
 
+import com.draper.domain.BorrowBook;
+
 public interface BorrowBookDao extends BaseDao{
 
-    void add(Object object);
-
-    void update(Object object);
+    BorrowBook find(String userAccount);
 
 }

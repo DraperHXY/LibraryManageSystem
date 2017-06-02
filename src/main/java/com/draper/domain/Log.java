@@ -9,7 +9,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "log")
-public class Log {
+public class Log extends BaseDomain{
 
     @Id
     @Column

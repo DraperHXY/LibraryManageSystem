@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class Admin {
+public class Admin extends BaseDomain{
     @Id
     @Column
     private String account;

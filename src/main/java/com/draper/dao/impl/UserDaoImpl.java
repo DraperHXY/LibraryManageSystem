@@ -21,20 +21,28 @@ public class UserDaoImpl implements UserDao {
         hibernateTemplate.update(user);
     }
 
-    public boolean isSuccess(Object object) {
-        User user = (User) object;
-        String relAccount = user.getAccount();
-        String relPassword = user.getPassword();
-        User susUser = hibernateTemplate.get(User.class, relAccount);
-        if (susUser.getPassword().equals(relPassword)){
-            return true;
-        } else {
-            return false;
-        }
+    /**
+     * @param object
+     * @deprecated
+     */
+    public void delete(Object object) {
+
     }
 
     @Autowired
     public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
         this.hibernateTemplate = hibernateTemplate;
+    }
+
+    public boolean isSecurity(Object object) {
+        User user = (User) object;
+        String relAccount = user.getAccount();
+        String relPassword = user.getPassword();
+        User susUser = hibernateTemplate.get(User.class, relAccount);
+        if (susUser.getPassword().equals(relPassword)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

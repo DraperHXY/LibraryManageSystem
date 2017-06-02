@@ -19,14 +19,6 @@ public class BookDaoImpl implements BookDao {
     }
 
     /**
-     * @param id
-     * @deprecated
-     */
-    public void delete(int id) {
-    }
-
-
-    /**
      * 通过 ISBN 查询
      *
      * @param isbn 主键
@@ -62,6 +54,14 @@ public class BookDaoImpl implements BookDao {
     public void  update(Object object) {
         Book book = (Book) object;
         hibernateTemplate.update(book);
+    }
+
+    /**
+     * @deprecated
+     * @param object
+     */
+    public void delete(Object object) {
+
     }
 
     @Autowired

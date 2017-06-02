@@ -28,7 +28,7 @@ public class AdminDaoTest {
         Admin admin = new Admin();
         admin.setAccount("Draper");
         admin.setPassword("ddd");
-        Assert.assertEquals(true, adminDao.isSuccess(admin));
+        Assert.assertEquals(true, adminDao.isSecurity(admin));
     }
 
     @Test
@@ -36,7 +36,7 @@ public class AdminDaoTest {
         Admin admin = new Admin();
         admin.setAccount("Draper");
         admin.setPassword("ddddd");
-        BaseDao<Admin> baseDao = adminDao;
+        BaseDao baseDao = adminDao;
         baseDao.update(admin);
     }
 

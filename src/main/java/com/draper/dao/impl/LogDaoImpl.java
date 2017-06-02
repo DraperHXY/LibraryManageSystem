@@ -22,19 +22,17 @@ public class LogDaoImpl implements LogDao {
     }
 
     /**
-     * @param id
-     * @deprecated 最好不要删除日志
+     * @param object
+     * @deprecated
      */
-    public void delete(int id) {
-        Log log = get(id);
-        hibernateTemplate.delete(log);
+    public void update(Object object) {
     }
 
     /**
-     * @deprecated
      * @param object
+     * @deprecated
      */
-    public void update(Object object) {
+    public void delete(Object object) {
     }
 
     @Autowired

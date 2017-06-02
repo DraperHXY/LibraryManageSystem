@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class BorrowBook {
+public class BorrowBook extends BaseDomain{
 
     @Id
     @Column

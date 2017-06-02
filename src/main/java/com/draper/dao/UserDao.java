@@ -1,10 +1,5 @@
 package com.draper.dao;
 
-public interface UserDao extends BaseDao {
+public interface UserDao extends BaseDao,CheckSecurity {
 
-    void add(Object object);
-
-    void update(Object object);
-
-    boolean isSuccess(Object object);
 }

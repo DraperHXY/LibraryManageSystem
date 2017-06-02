@@ -6,9 +6,4 @@ public interface LogDao extends BaseDao {
 
     Log get(int id);
 
-    /**
-     * @param object
-     * @deprecated 不能修改日志
-     */
-    void update(Object object);
 }
